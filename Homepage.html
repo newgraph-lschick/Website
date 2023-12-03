@@ -195,7 +195,17 @@
         }
 
         .contact-photo {
-          border-radius: 50px;
+          width: 300px; /* Adjust the width of the rounded container as needed */
+          height: 300px; /* Adjust the height of the rounded container as needed */
+          border-radius: 50%;
+          overflow: hidden; /* Ensure the image is fully contained within the rounded container */
+          margin: 20px auto; /* Adjust the margin for positioning */
+        }
+
+        .contact-image {
+          width: 100%; /* Ensure the image takes the full width of the container */
+          height: auto; /* Maintain the image's aspect ratio */
+          display: block;
         }
 
         footer {
