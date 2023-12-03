@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <title>Your Environmental Services</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: #333;
+            position: relative; /* Ensure the container is a positioning context for absolutely positioned children */
+        }
+
+         nav {
+            background-color: white;
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+        }
+
+        nav a {
+            color: #40531B;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 15px;
+            font-size: 20px; /* Adjust the font size as needed */
+        }
+
+        header {
+            background-color: white;
+            color: #fff;
+            padding: 40px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative; /* Ensure the container is a positioning context for absolutely positioned children */
+
+        }
+
+        .logo {
+            max-width: 500px; /* Adjust the max-width of the logo */
+        }
+
+        .River-container {
+            background: url('Images/River.jpeg') center/cover no-repeat fixed;
+            height: 600px; /* Set the height of the background container */
+            overflow: hidden;
+            position: relative; /* Ensure the container is a positioning context for absolutely positioned children */
+        }
+
+        .River-container img {
+          opacity: 1;
+          transition: opacity 0.5s ease; /* Add a smooth transition effect */
+          }
+
+       .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(to right, rgba(26, 83, 92, 0.8) 0%, rgba(26, 83, 92, 0) 50%, rgba(26, 83, 92, 0.8) 100%);
+       }
+
+        .River-text {
+            position: absolute;
+            top: 50%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-align: Left;
+            font-size: 20px; /* Adjust the font size as needed */
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .Mission-container {
+            background-color: rgb(26, 83, 92, 0.6);
+            height: 400px;
+            width: 80%;
+            margin: 50px auto 60px;
+            padding: 20px;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative; /* Ensure the container is a positioning context for absolutely positioned children */
+        }
+
+        .Mission-text {
+          color: #fff;
+          text-align: center;
+        }
+
+        .Mission-container h2 {
+          margin-bottom: 20px;
+          padding-bottom: 10px;
+          font-size: 40px;
+        }
+
+        .Mission-container p {
+          margin-bottom: 20px;
+          padding: 10px;
+          font-size: 20px;
+          line-height: 2;
+        }
+
+        .featured-projects {
+           background-color: white;
+           padding: 50px 0;
+           text-align: center;
+           font-size: 25px;
+           color: #385200;
+        }
+
+        .project {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          margin-top: 30px;
+          width: 88%;
+          margin: 0 auto;
+        }
+
+        .project-info {
+          flex: 0 1 300px;
+          text-align: center;
+          padding: 20px;
+          background-color: rgb(127, 184, 0, 0.5);
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          margin: 10px;
+        }
+
+        .project img {
+              max-width: 100%;
+              height: 200px;
+              width: 400px;
+              border-radius: 8px;
+              margin-bottom: 10px;
+          }
+
+        .project-info h3 {
+              font-size: 20px;
+              margin-bottom: 10px;
+              font-weight: normal;
+          }
+
+        .read-more {
+          display: inline-block;
+          padding: 10px 15px; /* Adjust padding to create a square shape */
+          text-align: center;
+          color: white;
+          background-color: #547A00; /* Button background color */
+          text-decoration: none;
+          border-radius: 4px; /* Optional: Add rounded corners for a softer look */
+        }
+
+        .featured-projects-heading {
+          text-align: center;
+          position: relative;
+          margin-bottom: 30px; /* Adjust the margin as needed */
+        }
+
+        .featured-projects-heading h2 {
+          display: inline-block;
+          background-color: #fff; /* Match the background color of your page */
+          padding: 0 20px; /* Add padding to the heading for spacing */
+        }
+
+        .featured-projects-heading::after {
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 200px; /* Adjust the line width as needed */
+          height: 5px; /* Adjust the line thickness as needed */
+          background-color: #385200; /* Adjust the line color */
+        }
+
+        .contact-section {
+          background-color: rgb(26, 83, 92, 0.6);
+          color: #fff;
+          padding: 50px 0;
+          text-align: center;
+        }
+
+        .contact-photo {
+          border-radius: 50px;
+        }
+
+        footer {
+              background-color: rgba(0, 123, 255, 0.8);
+              color: #fff;
+              text-align: center;
+              padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <img src="Images/Logo.jpg" alt="Your Logo" class="logo">
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+
+<div class="River-container">
+    <div class="overlay"></div>
+    <div class="River-text">
+        <h2>Welcome to New Graph Environment</h2>
+        <p>Ecosystem Restoration, Programming and GIS</p>
+    </div>
+</div>
+
+<div class="Mission-container">
+    <div class="Mission-text">
+        <h2>Our Mission</h2>
+        <p> At New Graph Environment we provide practical and innovative environmental research and consulting solutions.
+            We strive to build and maintain working relationships with proponents, scientists, First Nations,
+            stewardship groups, non-profits and regulators through sound science, open communication,
+            integrity and value-added deliverables. We are biologists and computer programmers that develop
+            collaborative open-source programmatic water quality and fisheries anlysis/reporting tools.
+            We will continue to facilitate aquatic ecosystem restoration with an emphasis on inclusive
+            engagement and knowledge sharing.</p>
+    </div>
+</div>
+
+<section class="featured-projects" id="projects">
+    <div class="featured-projects-heading">
+        <h2>Featured Projects</h2>
+    </div>
+
+
+    <div class="project">
+        <div class="project-info">
+            <img src="Images/Electrofishing.jpeg" alt="Electrofishing">
+            <h3>Bulkley River and Morice River Fish Passage Restoration Planning</h3>
+            <a class="read-more" href="project1.html">Read More</a>
+        </div>
+
+        <div class="project-info">
+            <img src="Images/Stream.jpeg" alt="Stream">
+            <h3>Upper Elk River and Flathead River Fish Passage Restoration Planning</h3>
+            <a class="read-more" href="project1.html">Read More</a>
+        </div>
+
+        <div class="project-info">
+            <img src="Images/Parsnip.jpeg" alt="Parsnip">
+            <h3>Parsnip River Fish Passage Restoration Planning</h3>
+            <a class="read-more" href="project1.html">Read More</a>
+        </div>
+
+
+        <!-- Add more projects as needed -->
+    </div>
+</section>
+
+<!-- New Contact Us Section -->
+<section class="contact-section">
+    <h2>Contact Us</h2>
+
+    <div class="contact-photo">
+        <img src="Images/Contact.jpeg" alt="Contact">
+    </div>
+
+</section>
+
+
+<section id="home">
+    <h2>Welcome to Your Environmental Services</h2>
+    <p>Leading the way in environmental sustainability.</p>
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+    <ul>
+        <li>Environmental Consulting</li>
+        <li>Waste Management</li>
+        <li>Renewable Energy Solutions</li>
+    </ul>
+</section>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>Learn about our commitment to a greener future.</p>
+</section>
+
+<footer>
+    <p>&copy; 2023 Your Environmental Services. All rights reserved.</p>
+</footer>
+
+<script>
+    $(document).ready(function () {
+    $(window).scroll(function () {
+        var scrollTop = $(this).scrollTop();
+        var opacity = 1 - scrollTop / 200; // Adjust the division value for the fade speed
+        $('.River-container img').css('opacity', opacity);
+    });
+});
+
+</script>
+
+
+</body>
+
+</html>
