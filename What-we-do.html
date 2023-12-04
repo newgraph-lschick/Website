@@ -1,10 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <title>What we do</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: #333;
+            position: relative; /* Ensure the container is a positioning context for absolutely positioned children */
+        }
+
+
+
+         nav {
+            background-color: white;
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+        }
+
+        nav a {
+            color: rgb(26, 83, 92);
+            text-decoration: none;
+            padding: 8px;
+            margin: 0 10px;
+            font-size: 20px; /* Adjust the font size as needed */
+        }
+
+        header {
+            background-color: white;
+            color: #fff;
+            padding: 40px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative; /* Ensure the container is a positioning context for absolutely positioned children */
+        }
+
+        .logo {
+            max-width: 500px; /* Adjust the max-width of the logo */
+        }
+
+
+
+        .Header-image-container {
+            background: url('Images/WWD-header-image.jpeg') center/cover no-repeat fixed;
+            height: 600px; /* Set the height of the background container */
+            overflow: hidden;
+            position: relative; /* Ensure the container is a positioning context for absolutely positioned children */
+        }
+
+        .Header-image-container img {
+          opacity: 1;
+          transition: opacity 0.5s ease; /* Add a smooth transition effect */
+          }
+
+       .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(to right, rgba(26, 83, 92, 0.8) 0%, rgba(26, 83, 92, 0) 50%, rgba(26, 83, 92, 0.8) 100%);
+       }
+
+        .Header-image-text {
+            position: absolute;
+            top: 50%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            text-align: Left;
+            font-size: 20px; /* Adjust the font size as needed */
+        }
+
+
+
+        .Restoration-section {
+            background-color: white;
+            color: #fff;
+            padding: 100px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .Restoration-photo {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-left: 70px;
+        }
+
+        .Restoration-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the image covers the container */
+            display: block;
+        }
+
+        .Restoration-text {
+            text-align: center;
+            flex-grow: 1;
+            color: rgb(26, 83, 92);
+        }
+
+        .Restoration-section p {
+          margin-bottom: 20px;
+          padding: 10px;
+          font-size: 20px;
+          line-height: 2;
+        }
+
+
+
+        .Programming-section {
+            background-color: white;
+            color: #fff;
+            padding: 100px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .Programming-photo {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-left: 70px;
+        }
+
+        .Programming-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the image covers the container */
+            display: block;
+        }
+
+        .Programming-text {
+            text-align: center;
+            flex-grow: 1;
+            color: rgb(26, 83, 92);
+        }
+
+        .Programming-section p {
+          margin-bottom: 20px;
+          padding: 10px;
+          font-size: 20px;
+          line-height: 2;
+        }
+
+
+
+        .GIS-section {
+            background-color: white;
+            color: #fff;
+            padding: 100px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .GIS-photo {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-left: 70px;
+        }
+
+        .GIS-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure the image covers the container */
+            display: block;
+        }
+
+        .GIS-text {
+            text-align: center;
+            flex-grow: 1;
+            color: rgb(26, 83, 92);
+        }
+
+        .GIS-section p {
+          margin-bottom: 20px;
+          padding: 10px;
+          font-size: 20px;
+          line-height: 2;
+        }
+
+        .view-gitHub {
+          display: inline-block;
+          padding: 10px 15px; /* Adjust padding to create a square shape */
+          text-align: center;
+          color: white;
+          background-color: rgb(26, 83, 92); /* Button background color */
+          text-decoration: none;
+          border-radius: 4px; /* Optional: Add rounded corners for a softer look */
+        }
+
+
+        footer {
+              background-color: rgb(26, 83, 92, 0.6);
+              color: #fff;
+              text-align: center;
+              padding: 10px;
+        }
+    </style>
 </head>
+
 <body>
 
+<!-- Logo and Navigation -->
+<header>
+    <img src="Images/Logo.jpg" alt="Your Logo" class="logo">
+    <nav>
+        <a href="Homepage.html">Home</a>
+        <a href="Who-are-we.html">Who are we</a>
+        <a href="What-we-do.html">What we do</a>
+        <a href="Our-Projects.html">Our projects</a>
+        <a href="contact-Us.html">Contact us</a>
+    </nav>
+</header>
+
+
+<!-- Homepage photo -->
+<div class="Header-image-container">
+    <div class="overlay"></div>
+    <div class="Header-image-text">
+        <h2>What we do</h2>
+    </div>
+</div>
+
+
+<!-- Restoration section -->
+<section class="Restoration-section">
+    <div class="Restoration-photo">
+        <img src="Images/Bulkley.jpeg" alt="Bulkley">
+    </div>
+
+    <div class="Restoration-text">
+        <h2>Ecosystem Restoration</h2>
+        <p> Fish passage assesment and restoration for streams and rivers </p>
+    </div>
+</section>
+
+
+
+<!-- Programming section -->
+<section class="Programming-section">
+    <div class="Programming-photo">
+        <img src="Images/Bulkley.jpeg" alt="Bulkley">
+    </div>
+
+    <div class="Programming-text">
+        <h2>Programming</h2>
+        <p> Programming for efficient and standardized assesment of streams </p>
+        <a class="view-gitHub" href="project1.html">Check out our GitHub</a>
+    </div>
+</section>
+
+
+
+<!-- GIS section -->
+<section class="GIS-section">
+    <div class="GIS-photo">
+        <img src="Images/Bulkley.jpeg" alt="Bulkley">
+    </div>
+
+    <div class="GIS-text">
+        <h2>GIS</h2>
+        <p> GIS mapping for spacial analysis of stream restoration </p>
+    </div>
+</section>
+
+
+
+<footer>
+    <p>&copy; 2023 New Graph Environment. All rights reserved.</p>
+</footer>
+
+<script>
+    $(document).ready(function () {
+    $(window).scroll(function () {
+        var scrollTop = $(this).scrollTop();
+        var opacity = 1 - scrollTop / 200; // Adjust the division value for the fade speed
+        $('.River-container img').css('opacity', opacity);
+    });
+});
+
+</script>
+
+
 </body>
+
 </html>

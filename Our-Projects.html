@@ -17,6 +17,8 @@
             position: relative; /* Ensure the container is a positioning context for absolutely positioned children */
         }
 
+
+
          nav {
             background-color: white;
             color: #fff;
@@ -41,12 +43,13 @@
             justify-content: space-between;
             align-items: center;
             position: relative; /* Ensure the container is a positioning context for absolutely positioned children */
-
         }
 
         .logo {
             max-width: 500px; /* Adjust the max-width of the logo */
         }
+
+
 
         .Header-image-container {
             background: url('Images/Projects-header-image.jpeg') center/cover no-repeat fixed;
@@ -79,6 +82,8 @@
             font-size: 20px; /* Adjust the font size as needed */
         }
 
+
+
         .Bulkley-section {
             background-color: white;
             color: #fff;
@@ -107,6 +112,8 @@
             flex-grow: 1;
             color: rgb(26, 83, 92);
         }
+
+
 
         .Elk-section {
             background-color: white;
@@ -137,6 +144,15 @@
             color: rgb(26, 83, 92);
         }
 
+
+
+        .Parsnip-section {
+            background-color: white;
+            color: #fff;
+            padding: 100px 0;
+            display: flex;
+            align-items: center;
+        }
 
         .Parsnip-photo {
             width: 400px;
@@ -169,10 +185,6 @@
           border-radius: 4px; /* Optional: Add rounded corners for a softer look */
         }
 
-        section {
-            padding: 20px;
-        }
-
         footer {
               background-color: rgb(26, 83, 92, 0.6);
               color: #fff;
@@ -184,18 +196,20 @@
 
 <body>
 
+<!-- Logo and Navigation -->
 <header>
     <img src="Images/Logo.jpg" alt="Your Logo" class="logo">
     <nav>
-        <a href="#home">Home</a>
-        <a href="#about">Who are we</a>
-        <a href="#services">What do we do</a>
-        <a href="#Projects">Our projects</a>
-        <a href="#contact">Contact us</a>
+        <a href="Homepage.html">Home</a>
+        <a href="Who-are-we.html">Who are we</a>
+        <a href="What-we-do.html">What we do</a>
+        <a href="Our-Projects.html">Our projects</a>
+        <a href="contact-Us.html">Contact us</a>
     </nav>
 </header>
 
 
+<!-- Homepage photo -->
 <div class="Header-image-container">
     <div class="overlay"></div>
     <div class="Header-image-text">
@@ -204,6 +218,7 @@
 </div>
 
 
+<!-- Bulkley section -->
 <section class="Bulkley-section">
     <div class="Bulkley-photo">
         <img src="Images/Bulkley.jpeg" alt="Bulkley">
@@ -216,6 +231,7 @@
 </section>
 
 
+<!-- Elk section -->
 <section class="Elk-section">
     <div class="Elk-photo">
         <img src="Images/Bulkley.jpeg" alt="Bulkley">
@@ -228,6 +244,7 @@
 </section>
 
 
+<!-- Parsnip section -->
 <section class="Parsnip-section">
     <div class="Parsnip-photo">
         <img src="Images/Bulkley.jpeg" alt="Bulkley">
@@ -242,7 +259,7 @@
 
 
 <footer>
-    <p>&copy; 2023 Your Environmental Services. All rights reserved.</p>
+    <p>&copy; 2023 New Graph Environment. All rights reserved.</p>
 </footer>
 
 <script>
